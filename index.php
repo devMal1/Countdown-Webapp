@@ -6,10 +6,10 @@
 
 <body>
 	<?php
-		public class Countdowns {
+		class Countdowns {
 			public $username;
 			public $events;
-			public function __constructor( $username = "EventGoer", $events = null ) {
+			public function  __construct( $username = "EventGoer", $events = null ) {
 				$this->username = $username;
 				$this->events = $events;
 			}
