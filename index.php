@@ -58,12 +58,27 @@
 		}
 	}
 
-	function validate_input( $data ) {
+	function validate_data( $data ) {
 		$data = trim( $data );
-		$data = stripslashes( $data );
 		$data = htmlspecialchars( $data );
 		return $data;
 	}
+
+  function isValid_date( $date ) {
+    if ( ! preg_match( "/^(0?[0-9]|1[0-2])\/[0-9]{2}\/[0-9]{4}$/", $date ) ) {
+      return false;
+    } else {
+      $date_array = explode( "/", $date );
+      return ( within_bounds( $date_array[0], 0, 12 ) && //check month
+                within_bounds( $date_array[1], 0, 31 ) && //check day
+                within_bounds( $date_array[2], 2016, null ) ) ? true : false; //check year and return
+    }
+  }
+
+  function within_bounds( $number, $min, $max ) {
+    if ( ! is_null( $max ) ) { return ( $number >= $min && $number <= $max ) ? true : false; }
+    else { return ( $number >= $min ) ? true : false; }
+  }
 
 	$event;
 	$event_name = "";
@@ -73,26 +88,27 @@
 	if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		if ( empty( $_POST["event_name"] ) ) { $name_error = "Name is required"; }
 		else {
-			$event_name = validate_input( $_POST["event_name"] );
-			if ( ! preg_match( "/^[a-zA-Z]+[ ]*$/", $event_name ) ) {
-        $name_error = "The event name should start with a letter and only containt letters and spaces";
+			$event_name = validate_data( $_POST["event_name"] );
+      $event_name = stripslashes( $event_name );
+			if ( ! preg_match( "/^[a-zA-Z]+[ ]*[a-zA-z0-9]*$/", $event_name ) ) {
+        $name_error = "The event name should start with a letter and only containt letters, numbers and spaces";
         $event_name = "";
       }
 		}
 
 		if ( empty( $_POST["event_date"] ) ) { $date_error = "Date is required"; }
 		else {
-			$event_date = htmlspecialchars( $_POST["event_date"] );
-			if ( false /*date_diff( $event_date, getdate() ) <= 0*/ ) {
+			$event_date = validate_data( $_POST["event_date"] );
+			if ( ! isValid_date( $event_date ) ) {
+        $date_error = "The event date must be a valid date (MM/DD/YYYY)";
+        $event_date = "";
+      } else if ( date_create( $event_date ) <= date_create( "now" ) ) {
         $date_error = "The event date should be in the future";
         $event_date = "";
       }
 		}
 
-		if ( ! ( $event_name == "" || $event_date = "" ) ) {
-      //Save cookies
-      ////////////////////////////////////////////////////
-      echo "DEBUG: " . $event_date;
+		if ( ! ( $event_name == "" || $event_date == "" ) ) {
       $event = array( "event_name" => $event_name, "event_date" => $event_date );
       Bakery::bakeCookies( $event );
     }
