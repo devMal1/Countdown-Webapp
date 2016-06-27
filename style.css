@@ -1,0 +1,49 @@
+@media screen and ( min-width: 730px )  {
+  div {
+    margin: 1%;
+    border: 1px solid black;
+    width: 100%;
+    margin-left: auto;
+    border-radius: 5px;
+  }
+
+  h3 {
+    display: inline-block;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 0%;
+    padding: 5px;
+  }
+
+  #title-banner {
+    text-align: center;
+    /*float: both;
+    position: fixed;*/
+  }
+
+  #dashboard {
+    position: relative;
+    display: inline-block;
+    width: 48%;
+    margin-left: auto;
+    /*border: none;*/
+  }
+
+  #event-form {
+    position: relative;
+    display: inline-block;
+    width: 48%;
+    margin-left: auto;
+    /*border: none;*/
+  }
+
+  #event-form #button {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+  }
+
+  #featured-countdown {
+
+  }
+}

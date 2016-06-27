@@ -118,6 +118,7 @@
 <html>
 <head>
 	<title>Countdown App</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -141,6 +142,7 @@
 	</div>
 
 	<div id="dashboard">
+		<h3>Eventboard</h3>
 		<table>
 			<thead>
 				<tr><th colspan="2">Countdowns</th></tr>
@@ -153,7 +155,8 @@
 				<?php $ur_countdowns->display_events(); ?>
 			</tbody>
 		</table>
-
+	</div>
+	<div id="event-form">
 		<button type="button" onclick="">New Event</button>
 		<form method="post" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] );  ?>">
 			<input type="text" placeholder="ie Graduation" name="event_name" required/>
@@ -161,11 +164,12 @@
         placeholder="<?php $today = getdate(); echo "ie " . $today["mon"] . "/" . $today["mday"] . "/" . $today["year"]; ?>"/>
 			<br /><p class="error"><?php echo $name_error; ?></p>
 			<p class="error"><?php echo $date_error; ?></p>
-			<input type="submit" value="Add Event">
+			<input id="button" type="submit" value="Add Event">
 		</form>
 	</div>
 
 	<div id="featured-countdown">
+		<h3>Featured Countdowns</h3>
 		<script>
 			//javascript animation in here...
 		</script>
