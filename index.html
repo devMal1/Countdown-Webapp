@@ -24,35 +24,40 @@
 	</div>
 
 	<div id="container">
-		<h2>Eventboard</h2>
-		<div id="eventboard">
-			<table>
-				<thead>
-					<tr><th colspan="2">Countdowns</th></tr>
-					<tr>
-						<th>Event</th>
-						<th>Date of</th>
-					</tr>
-				</thead>
-				<tbody>
-					<!--php $ur_countdowns->display_events(); -->
-					<tr><td>no data...</td><td>no data...</td></tr>
-				</tbody>
-			</table>
-		</div>
-		<div id="event-form">
-			<button type="button" onclick="">New Event</button>
-			<form>
-				<input type="text" name="event_name" placeholder="ie Graduation" required />
-				<input type="date" name="event_date" placeholder="" required />
-				<input id="button" type="submit" value="Add Event" />
-			</form>
+		<div class="dashboard">
+			<h2>Eventboard</h2>
+			<div id="eventboard">
+
+				<table>
+					<thead>
+						<tr><th colspan="2">Countdowns</th></tr>
+						<tr>
+							<th>Event</th>
+							<th>Date of</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--php $ur_countdowns->display_events(); -->
+						<tr><td>no data...</td><td>no data...</td></tr>
+					</tbody>
+				</table>
+				<div class="button">New Event</div>
+			</div>
+			<div id="event-form">
+				<form>
+					<input type="text" name="event_name" placeholder="ie Graduation" pattern="" required />
+					<input type="date" name="event_date" placeholder="" pattern="" min="" required />
+					<input id="button" type="submit" value="Add Event" />
+				</form>
+			</div>
 		</div>
 
-		<div id="featured-countdown">
-			<h2>Featured Countdowns</h2>
-			<div>
-				<!--javascript animation in here... -->
+		<div class="dashboard">
+			<div id="featured-countdown">
+				<h2>Featured Countdowns</h2>
+				<div>
+					<!--javascript animation in here... -->
+				</div>
 			</div>
 		</div>
 	</div>

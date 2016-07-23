@@ -60,11 +60,12 @@
 
   h2 {
     display: block;
-    border-right: 1px solid black;
+    /*border-right: 1px solid black;
     border-bottom: 1px solid black;
-    border-radius: 1px;
-    padding: 5px;
-    margin: 0px;
+    border-radius: 1px;*/
+    padding: 10px 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     color: white;
   }
 
@@ -75,15 +76,20 @@
     /*background-color: red;*/
   }
 
+  .dashboard {
+    border-bottom: 3px solid black;
+    padding-bottom: 20px;
+  }
+
   #eventboard {
-    float: left;
-    width: 50%;
+    width: 100%
   }
 
   #eventboard table {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     text-align: center;
-    margin-top: 10px;
+    cursor: default;
   }
 
   #eventboard table th {
@@ -91,24 +97,53 @@
   }
 
   #event-form {
-    width: 50%;
-    float: right;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #event-form form {
+    display: flex;
+  }
+
+  #event-form input {
+    width: 20%;
+    margin: auto;
   }
 
   #event-form #button {
-    /*position: relative;
-    top: 50%;
-    right: 0%;*/
-    float: right;
+    cursor: pointer;
+  }
+
+  .button {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    padding: 5px;
+    margin-left: 75%;
+    border-radius: 7px;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    text-align: center;
+    line-height: 150%;
+    background-color: #4da6ff;
+    color: black; /*#d9d9d9;*/
+    cursor: pointer;
+  }
+
+  .button:hover /*.pressed*/ {
+    /*border-width: 2px;*/
+    box-shadow: 5px 5px 10px white;
+    text-shadow: 1px 1px 1px white;
+    border-color: white;
+    color: white;
+    left: 3px;
+    top: 3px;
   }
 
   #featured-countdown {
     clear: both;
-  }
-
-  #event-form, #eventboard, #featured-countdown {
-    border-bottom: 3px solid black;
-    /*padding-top: 20px;*/
   }
 
 }
