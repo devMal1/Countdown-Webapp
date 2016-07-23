@@ -1,49 +1,114 @@
 @media screen and ( min-width: 730px )  {
-  div {
-    margin: 1%;
-    border: 1px solid black;
-    width: 100%;
-    margin-left: auto;
-    border-radius: 5px;
+  body {
+    font-family: cursive;
+    background-color: #ff8533;
+    margin: 0px;
   }
 
-  h3 {
-    display: inline-block;
-    border-right: 1px solid black;
+  header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
-    margin-top: 0%;
-    padding: 5px;
+    background-color: white;
+    color: #ff6600;
   }
 
   #title-banner {
     text-align: center;
-    /*float: both;
-    position: fixed;*/
   }
 
-  #dashboard {
-    position: relative;
+  #users-name {
     display: inline-block;
-    width: 48%;
+    border: medium none;
+    font-size: 2em;
+    font-family: cursive;
+    font-weight: 600;
+    width: 20%;
+    color: #ff6600;
+    text-align: right;
+  }
+
+  #title {
+    display: inline-block;
+  }
+
+  #background-left {
+    float: left;
+  }
+
+  #background-right {
+    float: right;
+  }
+
+  .side {
+    /*height: 100%;*/
+    height: 1020px;
+    width: 15%;
+    display: inline-block;
+    background-color: #99ccff;
+  }
+
+  div {
+    /*margin: 1%;
+    border: 1px solid black;
+    width: 100%;
     margin-left: auto;
-    /*border: none;*/
+    border-radius: 5px;*/
+  }
+
+  h2 {
+    display: block;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 1px;
+    padding: 5px;
+    margin: 0px;
+    color: white;
+  }
+
+  #container {
+    width: 70%;
+    margin-top: 82px;
+    display: inline-block;
+    /*background-color: red;*/
+  }
+
+  #eventboard {
+    float: left;
+    width: 50%;
+  }
+
+  #eventboard table {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #eventboard table th {
+    font-size: 20px;
   }
 
   #event-form {
-    position: relative;
-    display: inline-block;
-    width: 48%;
-    margin-left: auto;
-    /*border: none;*/
+    width: 50%;
+    float: right;
   }
 
   #event-form #button {
-    position: absolute;
+    /*position: relative;
     top: 50%;
-    right: 0%;
+    right: 0%;*/
+    float: right;
   }
 
   #featured-countdown {
-
+    clear: both;
   }
+
+  #event-form, #eventboard, #featured-countdown {
+    border-bottom: 3px solid black;
+    /*padding-top: 20px;*/
+  }
+
 }

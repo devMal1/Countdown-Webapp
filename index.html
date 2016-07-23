@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown App</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<header>
+		<div id="title-banner">
+			<input id="users-name" type="text" value="EventGoer" />
+			<h1 id="title">'s Countdown(s)</h1>
+		</div>
+	</header>
+
+	<div id="sidebars">
+		<div id="background-left" class="side">
+			<img src="" />
+		</div>
+
+		<div id="background-right" class="side">
+			<img src="" />
+		</div>
+	</div>
+
+	<div id="container">
+		<h2>Eventboard</h2>
+		<div id="eventboard">
+			<table>
+				<thead>
+					<tr><th colspan="2">Countdowns</th></tr>
+					<tr>
+						<th>Event</th>
+						<th>Date of</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!--php $ur_countdowns->display_events(); -->
+					<tr><td>no data...</td><td>no data...</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="event-form">
+			<button type="button" onclick="">New Event</button>
+			<form>
+				<input type="text" name="event_name" placeholder="ie Graduation" required />
+				<input type="date" name="event_date" placeholder="" required />
+				<input id="button" type="submit" value="Add Event" />
+			</form>
+		</div>
+
+		<div id="featured-countdown">
+			<h2>Featured Countdowns</h2>
+			<div>
+				<!--javascript animation in here... -->
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
