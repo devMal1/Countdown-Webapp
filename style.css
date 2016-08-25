@@ -1,7 +1,7 @@
 @media screen and ( min-width: 730px )  {
   body {
     font-family: cursive;
-    background-color: #ff8533;
+    background-color: #99ccff;
     margin: 0px;
   }
 
@@ -10,7 +10,7 @@
     position: fixed;
     z-index: 1;
     border-top: 1px solid black;
-    box-shadow: 0px 1px 2px black;
+    box-shadow: 0px 1px 5px black;
     /*border-bottom: 1px solid black;*/
     background-color: white;
     color: #ff6600;
@@ -79,12 +79,16 @@
     width: 70%;
     margin-top: 82px;
     display: inline-block;
-    /*background-color: red;*/
   }
 
   .dashboard {
     /*border-bottom: 3px solid black;*/
     padding-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    background-color: #ff8533;
+    box-shadow: 0px 1px 2px black;
+    border-radius: 5px;
   }
 
   #eventboard {
