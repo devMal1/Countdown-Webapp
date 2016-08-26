@@ -1,12 +1,12 @@
 @media screen and ( min-width: 730px )  {
 
-  #site-construction {
+  /*#site-construction {
       z-index: 20;
       width: 800px;
       position: fixed;
       left: 17%;
       top: 30%;
-  }
+  }*/
 
   body {
     font-family: cursive;
