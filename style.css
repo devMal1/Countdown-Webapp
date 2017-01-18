@@ -19,7 +19,7 @@
   .button {
     width: 50px;
     height: 50px;
-    position: relative;
+    position: absolute;
     padding: 5px;
     border-radius: 7px;
     border-bottom: 4px solid black;
@@ -29,6 +29,7 @@
     background-color: #4da6ff;
     color: black; /*#d9d9d9;*/
     cursor: pointer;
+    outline: none;
   }
   
   .button:hover /*.pressed*/ {
@@ -37,12 +38,14 @@
     text-shadow: 1px 1px 1px white;
     border-color: white;
     color: white;
-    left: 3px;
-    top: 3px;
+    /*left: 3px;
+    top: 3px;*/
   }
   
   .dashboard {
     /*border-bottom: 3px solid black;*/
+    width: 70%;
+    margin: auto;
     padding-bottom: 20px;
     margin-bottom: 50px;
     margin-top: 20px;
@@ -107,6 +110,7 @@
   #name-save {
 		position: absolute;
 		right: 5%;
+		top: 20%;
   }
 
   #background-left {
@@ -137,8 +141,7 @@
   }
 
   #container {
-    width: 70%;
-	margin: auto;
+    width: 100%;
     margin-top: 82px;
     display: inline-block;
   }
