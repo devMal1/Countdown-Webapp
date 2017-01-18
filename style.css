@@ -190,6 +190,7 @@
 
   #event-form #add-event-button {
     cursor: pointer;
+    margin-left: 40%;
     position: static;
   }
 
