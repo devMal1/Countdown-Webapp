@@ -168,7 +168,7 @@
   }
   
   #eventboard div.button {
-  	margin-left: 75%;
+  	right: 20%;
   }
 
   #event-form {
@@ -190,7 +190,7 @@
 
   #event-form #add-event-button {
     cursor: pointer;
-    margin-left: 40%;
+    position: static;
   }
 
   #featured-countdown {
