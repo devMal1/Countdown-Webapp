@@ -12,13 +12,14 @@
 			<input id="users-name" type="text" value="EventGoer" />
 			<h1 id="title">'s Countdown(s)</h1>
 		</div>
+		<button id="name-save" class="button">Save name?</button>
 	</header>
 
 	<!-- <div id="site-construction">
 		<img src="SiteConstruction.png" height="300" width="800" />
 	</div> -->
 
-	<div id="sidebars">
+	<!-- <div id="sidebars">
 		<div id="background-left" class="side">
 			<img src="" />
 		</div>
@@ -26,13 +27,12 @@
 		<div id="background-right" class="side">
 			<img src="" />
 		</div>
-	</div>
+	</div> -->
 
 	<div id="container">
 		<div class="dashboard">
 			<h2>Eventboard</h2>
 			<div id="eventboard">
-
 				<table>
 					<thead>
 						<tr><th colspan="2">Countdowns</th></tr>
@@ -42,7 +42,6 @@
 						</tr>
 					</thead>
 					<tbody>
-						<!--php $ur_countdowns->display_events(); -->
 						<tr><td>no data...</td><td>no data...</td></tr>
 					</tbody>
 				</table>
@@ -52,7 +51,7 @@
 				<form>
 					<input type="text" name="event_name" placeholder="ie Graduation" pattern="" required />
 					<input type="date" name="event_date" placeholder="" pattern="" min="" required />
-					<input id="button" type="submit" value="Add Event" />
+					<input id="add-event-button" type="submit" value="Add Event" />
 				</form>
 			</div>
 		</div>
